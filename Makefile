@@ -424,6 +424,9 @@ $(STATIC_OUTDIR)/port/port_posix_sse.o: port/port_posix_sse.cc
 $(SHARED_OUTDIR)/port/port_posix_sse.o: port/port_posix_sse.cc
 	$(CXX) $(CXXFLAGS) $(PLATFORM_SHARED_CFLAGS) $(PLATFORM_SSEFLAGS) -c $< -o $@
 
+LIBRARY = libleveldb.a
+MEMENVLIBRARY = libmemenv.a
+
 INC = include/leveldb
 LIB = $(LIBRARY) $(MEMENVLIBRARY)
 install: $(LIB) $(INC)
